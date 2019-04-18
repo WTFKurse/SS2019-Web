@@ -24,7 +24,7 @@ Praxisaufgabe
 
 Sämtliche Slides sowie Praxisaufgaben findest du auf der Kursinternetseite der jeweiligen Kurseinheit zum Download bereit. Das Skript ist separat auf der Webseite erreichbar.
 
-!> Für das Sammeln von Credits ist ein Nutzerkonto auf unserer Kursseite erforderlich. Eine Freischaltung erfolgt über https://python3.wtf/enrollment.
+!> Für das Sammeln von Credits ist ein Nutzerkonto auf unserer Kursseite erforderlich. Eine Freischaltung erfolgt über https://wtfkurse.de/web/enroll.
 
 ### Kurstutoren
 
@@ -64,7 +64,7 @@ Sämtliche Slides sowie Praxisaufgaben findest du auf der Kursinternetseite der 
 	<strong>Editor</strong><br>Ein Editor ist eine Software zur Bearbeitung und Eingabe von Programmcode (Quelltext). Er unterscheidet sich von einer komfortablen Textverarbeitung dadurch, dass er keine unsichtbaren Formatierungsanweisungen in den Text einfügt, um ihn Absätze, Listen und Tabellen zu gliedern.
 	</div>
 	<div>
-	<strong>IDE</strong><br>Eine IDE ist eine Integrierte Entwicklungsumgebung (Abk. für **I**ntegrated **D**evelopment **E**nvironment) und vereint Editor, Compiler und Debugger unter einer einheitlichen Oberfläche.
+	<strong>IDE</strong><br>Eine IDE ist eine Integrierte Entwicklungsumgebung (Abk. für Integrated Development Environment) und vereint Editor, Compiler und Debugger unter einer einheitlichen Oberfläche.
 	</div>
   <div>
 	<strong>Webserver</strong><br>Ein Webserver ist ein Dienst, der zur Auslieferung von (Web-)Dokumenten auf einem Server dient.
@@ -103,3 +103,36 @@ HTML5 wird heute oft in Kombination mit CSS3, der dritten Generation von CSS, ve
 </body>
 </html>
 ```
+
+#### Aufbau
+Der Aufbau von HTML lässt sich einfach mit dem Aufbau eines Menschen vergleichen. Es gibt innerhalb vom HTML-Tag einen Kopf- und einen Körperbereich.
+
+Im _Kopfbereich_ (`<head>`) befindet sich die Identität der Webseite: Titel, Zeichenkodierung, Beschreibung. Diese werden durch sogenannte „Metatags“ definiert. 
+
+Im _Körperbereich_ (`<body>`) werden sämtliche Inhalte definiert. Hier werden sämtliche HTML-Elemente (Tags) implementiert.
+
+Grundsätzlich bestehen HTML-Quelltexte aus Tags. Tags sind HTML Befehle, die in spitzen Klammen stehen und grundsätzlich kleingeschrieben werden.
+
+Jeder HTML-Befehl hat die Form `<tag>`, der schließende Tag am Ende `</tag>`
+
+#### Schachteln von HTML-Befehle
+
+Bei der Reihenfolge der HTML-Befehle muss darauf geachtet werden, dass diese in umgekehrter Reihenfolge wieder geschlossen werden.
+
+```html
+<tag1> <tag2> Inhalt </tag2> </tag1> 
+```
+
+Für die verschiedenen Tags empfiehlt sich ein „Cheatsheet“ als Überblick.
+
+#### Attribute in HTML-Tags
+
+Mittels Attribute lassen sich HTML-Befehle näher spezifizieren. 
+
+```html
+<tag attribut="wert">
+```
+
+### Cascading Style Sheets (CSS)
+
+Die Webtechnologie CSS ist die professionelle Art der Gestaltung und Formatierung von HTML-Elementen. Damit lässt sich Layout vom Inhalt trennen und deutlich effizienter verwalten. Sie lässt sich nur in Kombination mit HTML verwenden.
