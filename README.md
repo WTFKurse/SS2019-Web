@@ -232,30 +232,29 @@ Ein Klassenselektor spricht Elemente an, die einer **bestimmten Klasse** zugehö
 ```
 
 > Jetzt werden ausschließlich nur  `p`-Elemente mit der Klasse `hinweis` mit roter Schriftfarbe dargestellt. Die `<p>`-Tags ohne `class="hinweis"` bleiben unverändert.
->
-> ###### ID-Selektoren
->
-> Mit dem ID-Selektor kann ein Element angesprochen werden, dem eine **ID zugeordnet** wurde. Im HTML-Code kann jeder Tag mit einer ID - über das Attribut `id`  - versehen werden. Im CSS wird dieser über eine Raute (`#`) vor der ID angesprochen.
->
-> ```html
-> <body>
->   <ul id="navigation">
->     <li>Menüpunkt 1</li>
->     <li>Menüpunkt 2</li>
->     <li>Menüpunkt 3</li>
->   </ul>
-> </body>
-> ```
->
-> ```html
-> <style type="text/css">
->  #navigation {
->    margin-left: 20px;
->  }
-> </style>
-> ```
->
-> 
+
+###### ID-Selektoren
+
+ Mit dem ID-Selektor kann ein Element angesprochen werden, dem eine **ID zugeordnet** wurde. Im HTML-Code kann jeder Tag mit einer ID - über das Attribut `id`  - versehen werden. Im CSS wird dieser über eine Raute (`#`) vor der ID angesprochen.
+
+ ```html
+ <body>
+   <ul id="navigation">
+     <li>Menüpunkt 1</li>
+     <li>Menüpunkt 2</li>
+     <li>Menüpunkt 3</li>
+   </ul>
+ </body>
+ ```
+
+```html
+ <style type="text/css">
+  #navigation {
+    margin-left: 20px;
+  }
+ </style>
+```
+
 
 #### HTML DOM
 
