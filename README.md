@@ -136,3 +136,202 @@ Mittels Attribute lassen sich HTML-Befehle näher spezifizieren.
 ### Cascading Style Sheets (CSS)
 
 Die Webtechnologie CSS ist die professionelle Art der Gestaltung und Formatierung von HTML-Elementen. Damit lässt sich Layout vom Inhalt trennen und deutlich effizienter verwalten. Sie lässt sich nur in Kombination mit HTML verwenden.
+
+#### CSS einbinden und verwenden
+
+##### Variante 1 - in eine extra Datei auslagern und einbinden
+
+Hierzu wird eine neue Datei mit der Dateiendung `.css` angelegt. Anschließend wird diese über einen `<link>` HTML-Tag (für eine verlinkte Einbindung) extern im Kopf der HTML-Seite eingebunden.
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Seitentitel</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+</body>
+</html>
+```
+
+| Tag      | Attribut | Erklärung                                         |
+| -------- | -------- | ------------------------------------------------- |
+| `<link>` | `href`   | definiert den Pfad zur eingebundenen Datei        |
+|          | `rel`    | bestimmt die Beziehung *(relationship)* zur Datei |
+|          | `type`   | definiert den Typ der eingebundenen Datei         |
+
+##### Variante 2 - direkt in die HTML-Datei schreiben
+
+Hierzu wird im HTML-Code über den `<style>`  HTML-Tag der CSS-Code direkt intern eingebunden. Meistens wird der Tag im Kopfbereich eingebunden, kann allerdings an jeder Position des HTML-Codes stehen.
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Seitentitel</title>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+| Tag       | Attribut | Erklärung                                  |
+| --------- | -------- | ------------------------------------------ |
+| `<style>` | `type`   | definiert den Typ für den verwendeten Code |
+
+#### CSS Aufbau
+
+```css
+selektor {
+   eigenschaft: wert;
+}
+```
+
+```css
+body {
+   background: green;
+}
+```
+
+##### CSS-Selektoren
+
+Damit die Formateigenschaften auf ein Element angewendet werden können, muss definiert werden, welche Elemente angesprochen werden. Dies geschieht über **Selektoren**.  Als CSS Selektoren bezeichnet man die Teile einer CSS-Regel, die vor dem Abschnitt aus geschweiften Klammern stehen. 
+
+Die wichtigsten Selektoren sind die **Element**e, **Klassen** und **ID's**
+
+###### Element-Selektoren
+
+Der Element- bzw. Typselektor besteht aus dem **Namen des Elements**, das angesprochen werden soll. Mit diesem Selektor werden alle Elemente eines Typs angesprochen.
+
+```html
+<style type="text/css">
+ p {
+   color: red;
+ }
+</style>
+```
+
+###### Klassen-Selektoren
+
+Ein Klassenselektor spricht Elemente an, die einer **bestimmten Klasse** zugehörend sind. Im HTML-Code kann jeder Tag mit einer Klasse - über das Attribut `class`  - versehen werden. Im CSS wird dieser über einen Punkt (`.`)  vor der Klasse angesprochen.
+
+```html
+<body>
+  <p>Dies ist eine Zeile</p>
+  <p class="hinweis">Dies ist ein Hinweis</p>
+  <p>Dies ist eine weitere Zeile</p>
+  <p class="hinweis">Dies ist ein weiterer Hinweis</p>
+</body>
+```
+
+> Jetzt werden ausschließlich nur  `p`-Elemente mit der Klasse `hinweis` mit roter Schriftfarbe dargestellt. Die `<p>`-Tags ohne `class="hinweis"` bleiben unverändert.
+>
+> ###### ID-Selektoren
+>
+> Mit dem ID-Selektor kann ein Element angesprochen werden, dem eine **ID zugeordnet** wurde. Im HTML-Code kann jeder Tag mit einer ID - über das Attribut `id`  - versehen werden. Im CSS wird dieser über eine Raute (`#`) vor der ID angesprochen.
+>
+> ```html
+> <body>
+>   <ul id="navigation">
+>     <li>Menüpunkt 1</li>
+>     <li>Menüpunkt 2</li>
+>     <li>Menüpunkt 3</li>
+>   </ul>
+> </body>
+> ```
+>
+> ```html
+> <style type="text/css">
+>  #navigation {
+>    margin-left: 20px;
+>  }
+> </style>
+> ```
+>
+> 
+
+#### HTML DOM
+
+##### Aufbau Tag
+
+Ein Tag *(HTML-Element)* steht grundsätzlich mit seiner Tag-Bezeichnung in spitzen Klammern. Tags können um **Attribute** weiter spezialisiert werden. Die gängigen Attribute sind Style-Zuweisungen für CSS mittels *Klassen* oder *ID's*. Bis auf wenige Ausnahmen wie der  `<img>` Tag, wird jeder Tag wieder mit einem Backslash und der Bezeichnung in spitzen Klammern beendet.
+
+##### HTML DOM
+
+Der HTML DOM ist eine Modellierung der HTML-Webseite. Visuell wird damit die Struktur und Hierarchien des HTML-Dokuments dargestellt. 
+
+Im Eigentlichen dient dieser zur Manipulation von HTML-Elementen mittels Programme und Skripte. Die Darstellung als Modell hilft allerdings im Layout, um einzelne Hierarchien zu durchblicken.
+
+##### Box Prinzip
+
+Im HTML kommt grundsätzlich ein „Box-Prinzip“ zum Einsatz. Die meisten dargestellten Inhalte wie **Kopfzeile**, **Navigation**, **Seiteninhalt** und **Fußzeile** sind jeweils einzelne Einheiten, also für sich separierte Bereiche.
+
+###### div-Tag
+
+Für die Trennung und Einteilung in eigene Bereich kommt der `<div>` Tag zum Einsatz. Der Tag wird um verschiedene HTML-Elemente wie Text, Grafiken, Tabellen geschachtelt, die eine Einheit darstellen sollen.
+
+Damit im HTML nicht grundsätzlich alle Elemente ein bestimmtes Layout mittels CSS erhalten sollen, sondern speziell für den gewünschten Bereich wird der Tag um eine Klasse oder ID erweitert und ist damit in CSS ansteuerbar.  
+
+```html
+<body>
+    <h1>Allgemeines Blockelement</h1>
+
+    <div class="einfuehrung">
+      <h2>Listenüberschrift</h2>
+
+      <ul>
+        <li>Listenpunkt 1</li>
+        <li>Listenpunkt 2</li>
+      </ul>
+    </div>
+</body>
+```
+
+So sollen auf sämtlichen Seiten nun zum Beispiel die Überschrift in einem Einführungsabschnitt eine andere Farbe erhalten. Damit nun nicht grundsätzlich die Überschriften die im Quelltext vorkommen diese besondere Eigenschaft erhalten, wird diese in CSS spezifisch angesprochen:
+
+```css
+.einfuehrung h2 {
+    color: #cccccc;
+}
+```
+
+###### Layout-Tags in HTML5
+
+In Vergangenheit mussten also für die zu vor genannten Layout Bereiche wie Kopfzeile, Navigation oder Fußzeile jeweils eigene `div`-Tags mit einer CSS-Zuweisung definiert werden. Seit HTML5 gibt es zahlreiche neue Tags, die speziell für diesen Einsatz entwickelt wurden. So können Tags wie `<header>` für die Kopfzeile, `<nav>` für Navigationsbereiche oder `<footer>` für Fußzeilen genutzt werden.
+
+#### Tabellen
+
+Eine Tabelle ist eine geordnete Kombination von Daten oder Texte. Die Inhalte werden in **Zeilen** (waagerecht) und **Spalten** (senkrecht) angeordnet.
+
+Im Normalfall besteht eine Tabelle aus Tabellenzeilen, in der wiederum Tabellenzellen gegliedert werden.
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Seitentitel</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Inhalt</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+
+| Tag     | Erklärung                                                    |
+| ------- | ------------------------------------------------------------ |
+|`<table>` | leitet eine Tabelle ein (table = Tabelle)                    |
+| `<th>`    | leitet eine Kopfzelle ein (th = table header = Tabellenkopf) |
+| `<tr>`    | leitet eine neue Tabellenzeile ein (tr = table row = Tabellenzeile) |
+| `<td>`    | eine normale Datenzelle (td = table data = Tabellendaten)    |
