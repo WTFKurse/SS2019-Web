@@ -31,7 +31,7 @@ Sämtliche Slides sowie Praxisaufgaben findest du auf der Kursinternetseite der 
 <div class="teacher-list">
 	<div class="teacher">
 		<div class="avatar">
-			![Patrik Phan](_images/teacher_patrik.jpg 'Patrik Phan')
+      <img src="https://wtfkurse.de/wp-content/themes/wtfkurse/img/teacher/tutor_patrik.png">
 		</div>
 		<div class="contact">
 			<h4>Patrik Phan</h4>
@@ -40,7 +40,7 @@ Sämtliche Slides sowie Praxisaufgaben findest du auf der Kursinternetseite der 
 	</div>
 	<div class="teacher">
 		<div class="avatar">
-			![Kevin Schmid](_images/teacher_kevin.jpg 'Kevin Schmid')
+      <img src="https://wtfkurse.de/wp-content/themes/wtfkurse/img/teacher/tutor_kevin.png">
 		</div>
 		<div class="contact">
 			<h4>Kevin Schmid</h4>
