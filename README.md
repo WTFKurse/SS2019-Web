@@ -351,7 +351,7 @@ Demnach begann er ein eigenes Nebenprojekt. _Vue_ war damit geboren.
 
 [basiert auf Inhalte von https://www.hosteurope.de/blog/einfuehrung-in-vue-js-was-steckt-wirklich-hinter-dem-progressiven-framework/]
 
-Vue bezeichnet sich selbst als **Progressive Framework **, also als "fortschrittliches Framework". Vue passt sich damit an die Komplexität der eigentlichen Codebasis an. Das Wichtigste an Vue ist nebenbei aber auch der **Virtual DOM** und das **Deklarative Rendering bei Single File Components**. Es zählt im Übrigen zu den **Single-Page-Applications** (kurz SPA). Damit sind Anwendungen gemeint, die grundsätzlich nur **einer einzigen HTML-Datei** bestehen und die jeweiligen Inhalte (Komponente) dynamisch nachlädt.
+Vue bezeichnet sich selbst als **Progressive Framework**, also als "fortschrittliches Framework". Vue passt sich damit an die Komplexität der eigentlichen Codebasis an. Das Wichtigste an Vue ist nebenbei aber auch der **Virtual DOM** und das **Deklarative Rendering bei Single File Components**. Es zählt im Übrigen zu den **Single-Page-Applications** (kurz SPA). Damit sind Anwendungen gemeint, die grundsätzlich nur **einer einzigen HTML-Datei** bestehen und die jeweiligen Inhalte (Komponente) dynamisch nachlädt.
 
 #### Virtual DOM
 
@@ -366,7 +366,7 @@ Vue.js verwendet [Single File Components](https://vuejs.org/v2/guide/single-file
 Vue.js lässt einem generell viel Gestaltungsfreiraum. Die einfachste Variante, um ein Databinding mit dem Script herzustellen, ist die “Mustache” Syntax, die man bereits von [Handlebars](https://handlebarsjs.com/) kennt:
 
 ```
-<p>{{ greeting }} World!</p>
+{{ greeting }} World!
 ```
 
 In den Platzhalter wird automatisch von Vue.js der Wert `hello` des Data-Attributs eingesetzt. Ändert man im Script den Wert von `greeting`, passt sich auch das Template automatisch an. Dafür muss der Entwickler nicht mehr den Selektor anfragen und den Wert spezifisch ändern.
@@ -400,6 +400,8 @@ Das DVB-Webprojekt vereint verschiedene Technologien. Zu einem natürlich **Vue*
 
 Wir nutzen für unser Webprojekt die Node.js-Umgebung. Leider lässt diese sich schwer via den Online-Compiler _repl.it_ verwenden. Aus diesem Grund nutzen wir alternativ die **[CodeSandbox](https://codesandbox.io/s)**. Dort stellen wir ein Projekt-Grundgerüst zum Mitentwickeln bereit. 
 
+![DVB Vue-Projekt](https://wtfkurse.de/web/wp-content/uploads/sites/4/2019/06/dvb-vue.jpg)
+
 ### Node.js Module
 
 Unser Projekt nutzt nachfolgend die Module.
@@ -425,6 +427,8 @@ Definiert wurden diese in der `package.json`-Datei im Absatz:
 ```
 
 ### Projektstruktur
+
+![Projektstruktur](https://wtfkurse.de/web/wp-content/uploads/sites/4/2019/06/dvb_projekt.png)
 
 | Verzeichnis/Dateien | Verwendung                          |
 | ------------------- | ----------------------------------- |
@@ -881,4 +885,3 @@ JSON body
 ```
 
 (sometimes they come back: `<font color="#abc" />`)
-
